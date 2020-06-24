@@ -1,5 +1,21 @@
 #include <stdarg.h>
 #include <stdio.h>
+#include <unistd.h>
+
+
+int my_putchar(char c) {
+  return write(1, &c, 1);
+}
+
+int my_putstr(char *str) {
+  int index = 0;
+
+  while (str[index] != '\0') {
+    my_putchar(str[index]);
+    index += 1;
+  }
+  return index;
+}
 
 char* convert(unsigned int num, int base) 
 { 
@@ -36,7 +52,7 @@ void hexadecconvert(long int decimalNumber) {
 		quotient = quotient / 16;
 	}
 	for (j = i -1 ;j> 0;j--)
-	    putchar(hexadecimalNumber[j]);
+	    my_putchar(hexadecimalNumber[j]);
 
 }
 void pointeraddress(void *thing)
