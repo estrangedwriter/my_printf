@@ -17,8 +17,8 @@ int my_putstr(char *str) {
   return index;
 }
 
-char* convert(unsigned int num, int base) 
-{ 
+char* convert(unsigned int num, int base) {
+
 	static char Representation[]= "0123456789ABCDEF";
 	static char buffer[50]; 
 	char *ptr; 
@@ -26,11 +26,10 @@ char* convert(unsigned int num, int base)
 	ptr = &buffer[49]; 
 	*ptr = '\0'; 
 	
-	do 
-	{ 
+	do  { 
 		*--ptr = Representation[num%base]; 
 		num /= base; 
-	}while(num != 0); 
+	} while(num != 0); 
 	
 	return(ptr); 
 }
@@ -53,9 +52,23 @@ void hexadecconvert(long int decimalNumber) {
 	}
 	for (j = i -1 ;j> 0;j--)
 	    my_putchar(hexadecimalNumber[j]);
-
 }
-void pointeraddress(void *thing)
-{
-   hexadecconvert( (long)thing);
+
+void pointeraddress(void *thing) {
+	my_putchar('0');
+	my_putchar('x');
+    hexadecconvert( (long)thing);
 }  
+
+int countDigit(long long n) { 
+    int count = 0; 
+    if (n == 0) 
+		count= 1;	
+	else {
+		while (n != 0) { 
+        	n = n / 10; 
+        	++count; 
+    	} 
+	}
+    return count; 
+} 
