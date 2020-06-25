@@ -1,3 +1,16 @@
+ 
+/*
+** QWASAR PROJECT, 2020
+** my_ls
+** File description: This C source file is the main executable C file for the project/command my_ls.
+** My_putchar is an implementation of putchar.
+** My_putstr is an implementation of puts.
+** Convert will convert integers into their octal, decimal, and unsigned versions.
+** Hexadecconvert converts integers into their hexadecimal version.
+** Pointeraddress will get the address of a pointer. 
+** Countdigit counts the number of digits of an integer passed into my_printf.
+*/
+
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>

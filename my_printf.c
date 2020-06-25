@@ -1,3 +1,12 @@
+ 
+/*
+** QWASAR PROJECT, 2020
+** my_printf
+** File description: This C source file is the primary C file for the function my_printf.
+**
+**
+*/
+
 #include <stdarg.h>
 #include <stdio.h>
 #include "functions.h"
